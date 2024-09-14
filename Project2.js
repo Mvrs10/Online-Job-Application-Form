@@ -32,8 +32,8 @@ function FelonyExplainNo()
     felony.required = false;
 }
 // Email and phone number validation
-function validation()
-{
+validation= () => {
+
     // Email must be in proper format
     let useremail = document.querySelector('input[type="email"]').value;
     let validEmailRegex= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -49,5 +49,5 @@ function validation()
     {
         alert ("Invalid Phone Number");
         return;
-    }
-}
+    };
+};
