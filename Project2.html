@@ -1,0 +1,219 @@
+<html>
+<head>
+<link href="Project2.css" rel="stylesheet" type="text/css">
+<script src="Project2.js" defer></script>
+<title>Project #2</title>
+</head>
+<body>
+<div id="wrapper">
+<header>
+</header>
+<main>
+<form>
+<table>
+<caption>EMPLOYMENT/JOB APPLICATION</caption>
+<tr>
+    <td class="section" colspan="6">PERSONAL INFORMATION</td>
+</tr>
+<tr>
+    <td>FULL NAME:</td>
+    <td><input name="firstname" size="15" type="text" required></td>
+    <td><input name="midname" size="15" type="text" required></td>
+    <td><input name="lastname" size="15" type="text" required></td>
+    <td class="align">DATE:</td>
+    <td><input name="date" size="15" type="date" required></td>
+</tr>
+<tr>
+    <td></td>
+    <td class="description">First</td>
+    <td class="description">Middle</td>
+    <td class="description">Last</td>
+    <td colspan="2"></td>    
+</tr>
+<tr>
+    <td>ADDRESS:</td>
+    <td colspan="3"><input name="street" size="55" type="text" required></td>
+    <td class="align" colspan="2"><input name="aptnumber" size="20" type="text" required></td>
+</tr>
+<tr>
+    <td></td>
+    <td class="description" colspan="3">Street Address</td>
+    <td class="description align" colspan="2">Apt Suite</td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><input name="city" size="30" type="text" required></td>
+    <td><select name="stdprovince" size="1" required>
+        <option value="NL">Newfoundland and Labrador</option>
+        <option value="PE">Prince Edward Island</option>
+        <option value="NS">Nova Scotia</option>
+        <option value="NB">New Brunswick</option>
+        <option value="QC">Quebec</option>
+        <option value="ON">Ontario</option>
+        <option value="MB">Manitoba</option>
+        <option value="SK">Saskatchewan</option>
+        <option value="AB">Alberta</option>
+        <option value="BC">British Columbia</option>
+        <option value="YT">Yukon</option>
+        <option value="NT">Northwest Territories</option>
+        <option value="NU">Nuvanut</option>
+        </select>
+    </td>
+    <td class="align" colspan="2"><input name="zipcode" size="20" type="text" required></td>
+</tr>
+<tr>
+    <td></td>
+    <td class="description" colspan="2">City</td>
+    <td class="description">Province</td>
+    <td class="description align" colspan="2 align">Zip Code</td>
+</tr>
+<tr>
+    <td>E-MAIL:</td>
+    <td colspan="3"><input name="email" size="65" type="email" placeholder="name@domain.com" required></td>
+    <td class="align">PHONE:</td>
+    <td><input name="phone" size="15" type="tel" placeholder="(123) 456-7890" required></td>
+</tr>
+<tr>
+    <td colspan="2">SOCIAL SECURITY NUMBER (SSN):</td>
+    <td colspan="4"><input name="ssn" size="45" type="text"></td>
+</tr>
+<tr>
+    <td>DATE AVAILABLE:</td>
+    <td><input name="available_date" size="15" type="text" required></td>
+    <td>DESIRED PAY($):</td>
+    <td><input name="pay" size="15" type="text"></td>
+    <td class ="align" colspan="2">
+        <input name="hour" type="checkbox" value="hour" /> Hour
+        <input name="salary" type="checkbox" value="salary" /> Salary
+    </td>
+</tr>
+<tr>
+    <td colspan="2">POSITION APPLIED FOR:</td>
+    <td colspan="4"><input name="position" size="75" type="text" required></td>
+</tr>
+<tr>
+    <td colspan="2">POSITION APPLIED FOR:</td>
+    <td colspan="4">
+        <input name="fulltime" type="checkbox" value="fulltime" required/> FULL-TIME
+        <input name="parttime" type="checkbox" value="parttime" /> PART-TIME
+        <input name="seasonal" type="checkbox" value="seasonal" /> SEASONAL
+    </td>
+<tr>
+    <td class="section" colspan="6">EMPLOYMENT ELIGIBILITY</td>
+</tr>
+<tr>
+    <td colspan="2">ARE YOU A CANADIAN CITIZEN?</td>
+    <td colspan="4">
+        <input name="citizenship" type="radio" value="yes" required onclick="WorkPermitYes()"/> YES
+        <input name="citizenship" type="radio" value="no" onclick="WorkPermitNo()" /> NO
+    </td>
+</tr>
+<tr>
+    <td colspan="2">*IF NO, ARE YOU ALLOWED TO WORK IN CANADA?</td>
+    <td colspan="4">
+        <input name="workpermit" type="radio" value="yes" /> YES
+        <input name="workpermit" type="radio" value="no" /> NO
+    </td>
+</tr>
+<tr>
+    <td colspan="2">HAVE YOU EVER WORKED FOR THIS EMPLOYMENT?</td>
+    <td colspan="4">
+        <input name="employer" type="radio" value="yes" onclick="EmploymentTimeYes()" required/> YES
+        <input name="employer" type="radio" value="no" onclick="EmploymentTimeNo()"/> NO
+    </td>
+</tr>
+<tr>
+    <td colspan="2">*IF YES, WRITE THE START AND END DATES:</td>
+    <td colspan="4">
+        <input name="employerworkdate" size="70" type="text">
+    </td>
+</tr>
+<tr>
+    <td colspan="2">HAVE YOU EVER BEEN CONVICTED OF A FELONY?</td>
+    <td colspan="4">
+        <input name="felony" type="radio" value="yes" onclick="FelonyExplainYes()" required/> YES
+        <input name="felony" type="radio" value="no" onclick="FelonyExplainNo()"/> NO
+    </td>
+</tr>
+<tr>
+    <td colspan="2">*IF YES, PLEASE EXPLAIN:</td>
+    <td colspan="4">
+        <input name="explanation" size="70" type="text">
+    </td>
+</tr>
+<tr>
+    <td class="section" colspan="6">EDUCATION</td>
+</tr>
+<tr>
+    <td>HIGH SCHOOL:</td>
+    <td colspan="3"><select name="highschool"  size="1" required>
+        <option value="highschool1">Bayview High School</option>
+        <option value="highschool2">Earl Haig High School</option>
+        <option value="highschool3">Scarborough HS</option>
+        <option value="highschool4">Random High School</option>
+        </select>
+    </td>
+    <td class="align">CITY:</td>
+    <td><input name="educity" size="15" type="text" required></td>
+</tr>
+<tr>
+    <td>FROM:</td>
+    <td><input name="from" size="25" type="date" required></td>
+    <td class="align">TO:</td>
+    <td colspan="3"><input name="to" size="25" type="date" required></td>
+</tr>
+<tr>
+    <td>GRADUATE?</td>
+    <td>
+        <input name="graduation" type="radio" value="yes" required/> YES
+        <input name="graduation" type="radio" value="no" /> NO
+    </td>
+    <td class="align">DIPLOMA:</td>
+    <td colspan="3"><input name="diploma" size="65" type="text" required></td>
+</tr>
+<tr>
+    <td>COLLEGE:</td>
+    <td colspan="3"><select name="college"  size="1" required>
+        <option value="college1">Centennial College</option>
+        <option value="college2">George Brown College</option>
+        <option value="college3">Seneca College</option>
+        <option value="college4">Random College</option>
+        </select>
+    </td>
+    <td class="align">CITY:</td>
+    <td><input name="collegecity" size="15" type="text" required></td>
+</tr>
+<tr>
+    <td>FROM:</td>
+    <td><input name="from1" size="25" type="date" required></td>
+    <td class="align">TO:</td>
+    <td colspan="3"><input name="to1" size="25" type="date" required></td>
+</tr>
+<tr>
+    <td>GRADUATE?</td>
+    <td>
+        <input name="graduation1" type="radio" value="yes" required/> YES
+        <input name="graduation1" type="radio" value="no" /> NO
+    </td>
+    <td class="align">DEGREE:</td>
+    <td colspan="3"><input name="degree" size="65" type="text" required></td>
+</tr>
+<tr><td>&ensp;</td></tr>
+<tr><td>&ensp;</td></tr>
+<tr >
+<td colspan="4"><input class="button" name="btnPrintSubmit" type="submit" value="Submit" onclick="validation()"> <input class="button" name="btnPrintSubmit" type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+</main>
+<hr>
+<footer>
+    <small><i>Copyright &copy; March 24th, 2024, Minh Khoi Phan - 301278135 
+        <br> COMP 125 - Client-side Web Development, Winter 2024
+        <br> Project #2: Create an interactive HTML FORM.</i> <!--This is assignment info-->
+        <br> All Rights Reserved</small>
+        <br><small><i>Email:<a href="mailto:mphan16@my.centennialcollege.ca">Minh Khoi Phan</a></i></small>
+</footer>
+</div>
+</body>
+</html>

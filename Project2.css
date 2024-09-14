@@ -1,0 +1,70 @@
+body
+{
+	font-family:Arial;
+	color:black;
+	background-color:white;	
+}
+#wrapper
+{
+	width:960px;
+	padding-left:120px;
+	background-image:url("centenlogo.jfif");
+	background-size:100px 300px;
+	background-repeat:no-repeat;
+	margin-left:auto;
+	margin-right:auto;
+	border-style:solid;
+	border-color:black;
+}
+table
+{
+	font-size:14px;
+	padding:1px;
+    border-spacing:1px;
+	margin-left:auto;
+	margin-right:auto;
+}
+td
+{
+    margin:1px;
+	padding:5px 1px 1px 1px;
+    border-collapse:collapse;
+}
+caption
+{
+	font-weight:bold;
+	font-size:36px;
+	text-align:left;
+}
+.section
+{
+	font-size:18px;
+	font-weight:bold;
+    text-align:center;
+    border-style:solid;
+    border-color:black;
+    background-color:rgb(176, 212, 223);
+}
+.align
+{
+	text-align:left;
+    padding-left: 50px;
+}
+.description
+{
+    font-size:12px;
+}
+.button
+{
+    font-size: 20px;
+    margin: 4px 4px;
+    padding: 5px;
+    background-color:rgb(176, 212, 223);
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
+}
+input:invalid
+{
+    background-color: rgba(221,147,148,0.2);
+}
